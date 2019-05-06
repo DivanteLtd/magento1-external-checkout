@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Divante_VueStorefrontExternalCheckout>
+            <version>1.0.0</version>
+        </Divante_VueStorefrontExternalCheckout>
+    </modules>
+    <frontend>
+        <routers>
+            <vscheckout>
+                <use>standard</use>
+                <args>
+                    <module>Divante_VueStorefrontExternalCheckout</module>
+                    <frontName>vscheckout</frontName>
+                </args>
+            </vscheckout>
+        </routers>
+    </frontend>
+    <global>
+        <helpers>
+            <vuestorefrontexternalcheckout>
+                <class>Divante_VueStorefrontExternalCheckout_Helper</class>
+            </vuestorefrontexternalcheckout>
+        </helpers>
+        <models>
+            <vuestorefrontexternalcheckout>
+                <class>Divante_VueStorefrontExternalCheckout_Model</class>
+            </vuestorefrontexternalcheckout>
+        </models>
+        <events>
+            <checkout_onepage_controller_success_action>
+                <observers>
+                    <divante_vuestorefrontexternalcheckout_redirect>
+                        <class>vuestorefrontexternalcheckout/observer</class>
+                        <method>redirectAfter</method>
+                        <type>model</type>
+                    </divante_vuestorefrontexternalcheckout_redirect>
+                </observers>
+            </checkout_onepage_controller_success_action>
+        </events>
+    </global>
+
+</config>
