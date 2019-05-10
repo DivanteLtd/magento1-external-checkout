@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <sections>
-        <vuestorefrontbridge translate="label" module="vuestorefrontexternalcheckout">
+        <vuestorefrontexternalcheckout translate="label" module="vuestorefrontexternalcheckout">
             <label>External Checkout</label>
-            <tab>divante</tab>
+            <frontend_type>text</frontend_type>
+            <tab>advanced</tab>
             <sort_order>1000</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
@@ -29,6 +30,6 @@
                     </fields>
                 </vuestorefrontexternalcheckout_group>
             </groups>
-        </vuestorefrontbridge>
+        </vuestorefrontexternalcheckout>
     </sections>
 </config>

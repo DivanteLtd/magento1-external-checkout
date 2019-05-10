@@ -12,7 +12,7 @@ class Divante_VueStorefrontExternalCheckout_Model_Connector
      */
     public function currentCustomer($token)
     {
-        $secretKey = trim(Mage::getConfig()->getNode('default/auth/secret'));
+        $secretKey = trim(Mage::getStoreConfig(Divante_VueStorefrontBridge_Model_Config::XML_CONFIG_JWT_SECRET));
 
         try {
             $tokenData = JWT::decode($token, $secretKey, 'HS256');
