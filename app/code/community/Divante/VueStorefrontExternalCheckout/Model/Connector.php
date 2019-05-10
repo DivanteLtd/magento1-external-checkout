@@ -1,5 +1,5 @@
 <?php
-
+require_once(__DIR__ . '/../helpers/JWT.php');
 /**
  * Class Divante_VueStorefrontExternalCheckout_Model_Connector
  */
