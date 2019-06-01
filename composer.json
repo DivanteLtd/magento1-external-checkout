@@ -1,5 +1,5 @@
 {
-     "name": "gastroheroteam/magento1_external_checkout",
+     "name": "gastroheroteam/magento1-external-checkout",
      "type": "magento-module",
-     "description": "Gastro_Interface"
+     "description": "vsf-session-migration"
  }
