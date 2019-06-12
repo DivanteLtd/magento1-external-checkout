@@ -1,18 +1,10 @@
 <?php
-require_once(__DIR__ . '/../helpers/JWT.php');
+class Divante_VueStorefrontExternalCheckout_CartController extends Mage_Core_Controller_Front_Action {
 
-/**
- * Class Divante_VueStorefrontExternalCheckout_IndexController
- */
-class Divante_VueStorefrontExternalCheckout_IndexController extends Mage_Core_Controller_Front_Action
-{
-    /**
-     * Renders CMS Home page
-     *
-     * @param string $coreRoute
-     */
-    public function indexAction($coreRoute = null)
+    public function syncAction($coreRoute = null)
     {
+
+
         $customerToken = $this->getRequest()->getParam('token');
         $cartId = $this->getRequest()->getParam('cart');
         $connectorModel = Mage::getModel('vuestorefrontexternalcheckout/connector');

@@ -11,7 +11,7 @@
                 <use>standard</use>
                 <args>
                     <module>Divante_VueStorefrontExternalCheckout</module>
-                    <frontName>vscheckout</frontName>
+                    <frontName>vue</frontName>
                 </args>
             </vscheckout>
         </routers>
