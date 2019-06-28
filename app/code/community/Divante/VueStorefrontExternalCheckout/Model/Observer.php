@@ -16,7 +16,7 @@ class Divante_VueStorefrontExternalCheckout_Model_Observer
     {
         $configRedirect =
             Mage::getStoreConfig(
-                'vuestorefrontbridge/vuestorefrontexternalcheckout_group/externalcheckout_url',
+                'vuestorefrontexternalcheckout/vuestorefrontexternalcheckout_group/externalcheckout_url',
                 Mage::app()->getStore()
             );
 
