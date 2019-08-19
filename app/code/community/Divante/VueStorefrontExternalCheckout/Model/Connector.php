@@ -39,7 +39,7 @@ class Divante_VueStorefrontExternalCheckout_Model_Connector
             return Mage::getModel('sales/quote')->load($cartId);
         } else {
             if ($cartId) {
-                $secretKey = trim(Mage::getConfig()->getNode('default/auth/secret'));
+                $secretKey = trim(Mage::getStoreConfig(Divante_VueStorefrontBridge_Model_Config::XML_CONFIG_JWT_SECRET));
                 $tokenData = JWT::decode($cartId, $secretKey, 'HS256');
 
                 return Mage::getModel('sales/quote')->load($tokenData->cartId);
