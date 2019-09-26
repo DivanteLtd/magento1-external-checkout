@@ -15,6 +15,18 @@
                 </args>
             </vscheckout>
         </routers>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <divante_vuestorefrontexternalcheckout_controller_action_predispatch>
+                        <type>singleton</type>
+                        <class>vuestorefrontexternalcheckout/observer</class>
+                        <method>preDispatch</method>
+                        <type>model</type>
+                    </divante_vuestorefrontexternalcheckout_controller_action_predispatch>
+                </observers>
+            </controller_action_predispatch>
+        </events>
     </frontend>
     <global>
         <helpers>
@@ -39,5 +51,13 @@
             </checkout_onepage_controller_success_action>
         </events>
     </global>
+    <default>
+        <vuestorefrontexternalcheckout>
+            <vuestorefrontexternalcheckout_group>
+                <exclude_route><![CDATA[checkout/onepage]]></exclude_route>
+                <externalcheckout_url>order-success</externalcheckout_url>
+            </vuestorefrontexternalcheckout_group>
+        </vuestorefrontexternalcheckout>
+    </default>
 
 </config>

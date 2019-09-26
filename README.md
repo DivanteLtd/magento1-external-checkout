@@ -14,6 +14,8 @@ This extension allows the user to start the session within the Vue Storefront sh
 1. Copy the module files from the repo to `app/*`
 2. Please install the [`vsf-external-checkout`](https://github.com/Vendic/vsf-external-checkout) module for Vue Storefront. [See the instruction](https://github.com/Vendic/vsf-external-checkout).
 3. Go to: Stores -> Configuration | VueStorefront -> External Checkout and set URL
+4. if you want to redirect all other Magento Pages to VueStorefront activate Redirect to VSF homepage
+5. set exclude routes if needed
 
 To test if Your extension works just fine, You can test the following URL:
 * http://your-base-magento-address.io/vue/cart/sync/token/{customer-api-token}/cart/{cartId}
