@@ -55,7 +55,7 @@
         <vuestorefrontexternalcheckout>
             <vuestorefrontexternalcheckout_group>
                 <exclude_route><![CDATA[checkout/onepage]]></exclude_route>
-                <externalcheckout_url>order-success</externalcheckout_url>
+                <externalcheckout_url></externalcheckout_url>
             </vuestorefrontexternalcheckout_group>
         </vuestorefrontexternalcheckout>
     </default>
