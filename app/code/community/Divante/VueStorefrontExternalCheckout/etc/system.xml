@@ -29,7 +29,7 @@
                         </vuestorefront_url>
                         <externalcheckout_url translate="label">
                             <label>Success VSF path:</label>
-                            <comment>path to VSF success page</comment>
+                            <comment>path to VSF success page use /order-success for default</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
