@@ -44,7 +44,6 @@ class Divante_VueStorefrontExternalCheckout_Model_Observer
         $path = $route.DS.$controller.DS.$action;
 
         $exclude_routes = preg_split('/\r\n|[\r\n]/', Mage::getStoreConfig(SELF::EXCLUDE_ROUTE,Mage::app()->getStore()));
-        $vsf_url = Mage::getStoreConfig(SELF::VUESTOREFRONT_URL,Mage::app()->getStore());
 
         if(!Mage::getStoreConfig( SELF::REDIRECT_ALL,Mage::app()->getStore() )){
             return $this;
@@ -59,7 +58,12 @@ class Divante_VueStorefrontExternalCheckout_Model_Observer
                 }
             }
 
-            Mage::app()->getFrontController()->getResponse()->setRedirect($vsf_url);
+            // Force an interruption of the controller dispatching,
+            // to prevent the requested action from being executed.
+            // If only a redirect is defined, the action will still be executed.
+            $exception = new Mage_Core_Controller_Varien_Exception();
+            $exception->prepareForward('redirect', 'redirect', 'vue');
+            throw $exception;
         }
 
     }
